@@ -44,7 +44,17 @@ public class PlayerController : MonoBehaviour
 
     private bool IsGrounded()
     {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+        var colliders = Physics2D.OverlapCircleAll(groundCheck.position, 0.2f, groundLayer);
+
+        foreach (var collider in colliders)
+        {
+            if (collider.gameObject != gameObject)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     private void Flip()
