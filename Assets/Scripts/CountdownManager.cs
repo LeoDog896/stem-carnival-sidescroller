@@ -6,10 +6,14 @@ using UnityEngine;
 public class CountdownManager : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI countdownText;
-    [SerializeField] private float countdownTime = 60f;
+    public float startCountdownTime = 60f;
+    public float countdownTime;
 
+    void Start()
+    {
+        countdownTime = startCountdownTime;
+    }
 
-    // Update is called once per frame
     void Update()
     {
         countdownTime -= Time.deltaTime;
