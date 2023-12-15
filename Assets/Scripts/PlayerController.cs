@@ -11,9 +11,16 @@ public class PlayerController : MonoBehaviour
     private Vector2 movementInput = Vector2.zero;
     private bool jumpInput = false;
 
+    private Transform _originalParent;
+
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+
+    private void Start()
+    {
+        _originalParent = transform.parent;
+    }
 
     void Update()
     {
