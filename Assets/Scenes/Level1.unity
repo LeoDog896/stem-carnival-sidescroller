@@ -963,6 +963,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 9151159939137010995, guid: 6d9aa46a6772caf49a4207411cd18e9f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9151159939137011022, guid: 6d9aa46a6772caf49a4207411cd18e9f, type: 3}
       propertyPath: viewAngle
       value: 360
