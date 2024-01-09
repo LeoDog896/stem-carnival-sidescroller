@@ -16,6 +16,24 @@ public class LazerProjection : MonoBehaviour
             // If the raycast hits something, draw a line from this object's position to the hit point
             lineRenderer.SetPosition(0, transform.position);
             lineRenderer.SetPosition(1, hit.point);
+
+            GameObject gameObject = hit.collider.gameObject;
+            Carry carry = gameObject.GetComponent<Carry>();
+            // TODO: switch syntax to use guard statements l&r
+            if (carry != null)
+            {
+                GameObject carriedObject = carry.carriedObject;
+                if (carriedObject != null)
+                {
+                    carry.carriedObject = null;
+
+                    SendToCarrier sendToCarrier = carriedObject.GetComponent<SendToCarrier>();
+                    if (sendToCarrier != null)
+                    {
+                        carriedObject.transform.position = sendToCarrier.originalPosition;
+                    }
+                }
+            }
         }
         else
         {
