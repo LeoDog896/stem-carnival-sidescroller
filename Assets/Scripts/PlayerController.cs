@@ -5,7 +5,7 @@ public class PlayerController : MonoBehaviour
 {
     private float horizontal;
     private float speed = 8f;
-    private float jumpingPower = 6f;
+    private float jumpingPower = 6.5f;
     private bool isFacingRight = true;
 
     private Vector2 movementInput = Vector2.zero;
@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private Animator animator;
 
     private void Start()
     {
@@ -30,6 +31,10 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
         }
+
+        Debug.Log(horizontal != 0);
+        animator.SetBool("IsJumping", rb.velocity.y != 0);
+        animator.SetBool("IsMoving", horizontal != 0);
 
         Flip();
     }
