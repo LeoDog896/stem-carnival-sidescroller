@@ -434,7 +434,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa14c1e481aa2042a8e0e14d12317e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 3483649253752099894, guid: 1797dc39ddb78664ea986fd9a9f21c8f, type: 3}
+  player1Prefab: {fileID: 3483649253752099894, guid: 1797dc39ddb78664ea986fd9a9f21c8f, type: 3}
+  player2Prefab: {fileID: 1451002574589798616, guid: f67d90d953196d24fa382cc9c3c40d8f, type: 3}
   cameraHandler: {fileID: 519420033}
 --- !u!1 &836829701
 GameObject:
@@ -1300,6 +1301,18 @@ PrefabInstance:
     - target: {fileID: 5855826774568944413, guid: 50b529bcd806ea64488b19c1754f56a1, type: 3}
       propertyPath: m_Name
       value: Platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 5855826774568944415, guid: 50b529bcd806ea64488b19c1754f56a1, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5855826774568944415, guid: 50b529bcd806ea64488b19c1754f56a1, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5855826774568944415, guid: 50b529bcd806ea64488b19c1754f56a1, type: 3}
+      propertyPath: m_Color.r
+      value: 0.7830189
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50b529bcd806ea64488b19c1754f56a1, type: 3}
