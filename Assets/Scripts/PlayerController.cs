@@ -32,7 +32,8 @@ public class PlayerController : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
         }
 
-        animator.SetBool("IsJumping", Mathf.Abs(rb.velocity.y) > 0.001);
+        animator.SetBool("IsUp", Mathf.Abs(rb.velocity.y) > 0.001 && rb.velocity.y > 0.001);
+        animator.SetBool("IsFalling", Mathf.Abs(rb.velocity.y) > 0.001 && rb.velocity.y < -0.001);
         animator.SetBool("IsMoving", horizontal != 0);
 
         Flip();
