@@ -35,4 +35,26 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: 21300000, guid: cf5a4eacde8c04d47bcb623dad2975a8, type: 3}
     m_FromMain: 0
     m_EntryOverrideCount: 1
+  - m_Name: jumpRise
+    m_Hash: -936777543
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: player
+      m_Hash: -1743160731
+      m_Sprite: {fileID: 21300000, guid: 3e89882445fa1fd4ab5dd84570e9c207, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 3e89882445fa1fd4ab5dd84570e9c207, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 1
+  - m_Name: jumpFall
+    m_Hash: -1379414029
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: player
+      m_Hash: -1743160731
+      m_Sprite: {fileID: 21300000, guid: 4db68dff523f59e4b9b69c9caa7c6101, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 21300000, guid: 4db68dff523f59e4b9b69c9caa7c6101, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 1
   m_PrimaryLibraryGUID: 
