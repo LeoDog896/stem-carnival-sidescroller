@@ -135,7 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CategoryHash: 0
   m_labelHash: 0
-  m_SpriteKey: 1630.6151
+  m_SpriteKey: 0
 --- !u!1 &3400741331698887581
 GameObject:
   m_ObjectHideFlags: 0
