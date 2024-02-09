@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
 
     private bool IsGrounded()
     {
-        var colliders = Physics2D.OverlapCircleAll(groundCheck.position, 0.2f, groundLayer);
+        var colliders = Physics2D.OverlapCircleAll(groundCheck.position, 0.3f, groundLayer);
 
         foreach (var collider in colliders)
         {

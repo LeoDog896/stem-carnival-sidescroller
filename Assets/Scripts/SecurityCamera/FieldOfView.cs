@@ -5,7 +5,6 @@ using System.Collections.Generic;
 // Adapted from https://github.com/SebLague/Field-of-View/blob/master/Episode%2003/FieldOfView.cs
 public class FieldOfView : MonoBehaviour
 {
-
 	public float viewRadius;
 	[Range(0, 360)]
 	public float viewAngle;
@@ -61,7 +60,7 @@ public class FieldOfView : MonoBehaviour
 			if (Vector3.Angle(transform.forward, dirToTarget) < viewAngle / 2)
 			{
 				float dstToTarget = Vector3.Distance(transform.position, target.position);
-				if (!Physics.Raycast(transform.position, dirToTarget, dstToTarget, obstacleMask))
+				if (!Physics2D.Raycast(transform.position, dirToTarget, dstToTarget, obstacleMask))
 				{
 					visibleTargets.Add(target);
 				}
@@ -77,7 +76,7 @@ public class FieldOfView : MonoBehaviour
 		ViewCastInfo oldViewCast = new ViewCastInfo();
 		for (int i = 0; i <= stepCount; i++)
 		{
-			float angle = transform.eulerAngles.y - viewAngle / 2 + stepAngleSize * i;
+			float angle = transform.eulerAngles.z - viewAngle / 2 + stepAngleSize * i;
 			ViewCastInfo newViewCast = ViewCast(angle);
 
 			if (i > 0)
@@ -162,7 +161,7 @@ public class FieldOfView : MonoBehaviour
 		Vector3 dir = DirFromAngle(globalAngle, true);
 		RaycastHit hit;
 
-		if (Physics.Raycast(transform.position, dir, out hit, viewRadius, obstacleMask))
+		if (Physics2D.Raycast(transform.position, dir, out hit, viewRadius, obstacleMask))
 		{
 			return new ViewCastInfo(true, hit.point, hit.distance, globalAngle);
 		}
@@ -176,9 +175,9 @@ public class FieldOfView : MonoBehaviour
 	{
 		if (!angleIsGlobal)
 		{
-			angleInDegrees += transform.eulerAngles.y;
+			angleInDegrees += transform.eulerAngles.z;
 		}
-		return new Vector3(Mathf.Sin(angleInDegrees * Mathf.Deg2Rad), 0, Mathf.Cos(angleInDegrees * Mathf.Deg2Rad));
+		return new Vector3(Mathf.Sin(angleInDegrees * Mathf.Deg2Rad), Mathf.Cos(angleInDegrees * Mathf.Deg2Rad), 0);
 	}
 
 	public struct ViewCastInfo
@@ -208,5 +207,4 @@ public class FieldOfView : MonoBehaviour
 			pointB = _pointB;
 		}
 	}
-
 }
