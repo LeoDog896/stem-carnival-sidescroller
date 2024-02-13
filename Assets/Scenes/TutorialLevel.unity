@@ -4470,6 +4470,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7814230103188274160, guid: 028a2c29b050dee4aa425cf9b63f3ae4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -30.239014
+      objectReference: {fileID: 0}
     - target: {fileID: 7814230103239170410, guid: 028a2c29b050dee4aa425cf9b63f3ae4, type: 3}
       propertyPath: m_Name
       value: Timer
@@ -4645,7 +4649,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9151159939137011022, guid: 6d9aa46a6772caf49a4207411cd18e9f, type: 3}
       propertyPath: viewAngle
-      value: 360
+      value: 64.3
       objectReference: {fileID: 0}
     - target: {fileID: 9151159939137011022, guid: 6d9aa46a6772caf49a4207411cd18e9f, type: 3}
       propertyPath: viewRadius
