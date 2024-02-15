@@ -18,6 +18,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Animator animator;
 
+    [SerializeField] private PhysicsMaterial2D groundMaterial;
+    [SerializeField] private PhysicsMaterial2D airMaterial;
+
     private void Start()
     {
         _originalParent = transform.parent;
@@ -30,6 +33,15 @@ public class PlayerController : MonoBehaviour
         if (jumpInput && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+        }
+
+        if (IsGrounded())
+        {
+            rb.sharedMaterial = groundMaterial;
+        }
+        else
+        {
+            rb.sharedMaterial = airMaterial;
         }
 
         animator.SetBool("isUp", Mathf.Abs(rb.velocity.y) > 0.001 && rb.velocity.y > 0.001);
