@@ -838,6 +838,17 @@ MonoBehaviour:
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
+--- !u!114 &1055646319 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7814230104493272145, guid: 028a2c29b050dee4aa425cf9b63f3ae4, type: 3}
+  m_PrefabInstance: {fileID: 834321022}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 901823e5845d6f14e89ce46cb1b13607, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1357273633
 GameObject:
   m_ObjectHideFlags: 0
@@ -1162,6 +1173,10 @@ PrefabInstance:
       propertyPath: viewMeshFilter
       value: 
       objectReference: {fileID: 15798098}
+    - target: {fileID: 9151159939137011022, guid: 6d9aa46a6772caf49a4207411cd18e9f, type: 3}
+      propertyPath: countdownManager
+      value: 
+      objectReference: {fileID: 1055646319}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d9aa46a6772caf49a4207411cd18e9f, type: 3}
 --- !u!1 &1682474531
