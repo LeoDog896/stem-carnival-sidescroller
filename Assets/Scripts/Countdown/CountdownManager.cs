@@ -9,6 +9,8 @@ public class CountdownManager : MonoBehaviour
     public float startCountdownTime = 60f;
     public float countdownTime;
 
+    public bool noticedByCamera = false;
+
     void Start()
     {
         countdownTime = startCountdownTime;
@@ -16,7 +18,7 @@ public class CountdownManager : MonoBehaviour
 
     void Update()
     {
-        countdownTime -= Time.deltaTime;
+        countdownTime -= Time.deltaTime * (noticedByCamera ? 5 : 1);
 
         // M:SS:MSS
         countdownText.text = $"{Mathf.Floor(countdownTime / 60):00}:{Mathf.Floor(countdownTime % 60):00}:{Mathf.Floor((countdownTime * 100) % 100):00}";

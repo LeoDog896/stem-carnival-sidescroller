@@ -12,9 +12,6 @@ public class FieldOfView : MonoBehaviour
 	public LayerMask targetMask;
 	public LayerMask obstacleMask;
 
-	[HideInInspector]
-	public List<Transform> visibleTargets = new();
-
 	public float meshResolution;
 	public int edgeResolveIterations;
 	public float edgeDstThreshold;
@@ -23,6 +20,8 @@ public class FieldOfView : MonoBehaviour
 
 	public MeshFilter viewMeshFilter;
 	Mesh viewMesh;
+
+	public CountdownManager countdownManager;
 
 	void Start()
 	{
@@ -45,6 +44,9 @@ public class FieldOfView : MonoBehaviour
 		float stepAngleSize = viewAngle / stepCount;
 		List<Vector3> viewPoints = new();
 		ViewCastInfo oldViewCast = new();
+
+		bool targetVisible = false;
+
 		for (int i = 0; i <= stepCount; i++)
 		{
 			float angle = transform.eulerAngles.z - viewAngle / 2 + stepAngleSize * i;
@@ -68,6 +70,10 @@ public class FieldOfView : MonoBehaviour
 
 			}
 
+			if (newViewCast.rigidbody && newViewCast.rigidbody.gameObject.CompareTag("Player"))
+			{
+                targetVisible = true;
+            }
 
 			viewPoints.Add(newViewCast.point);
 			oldViewCast = newViewCast;
@@ -95,6 +101,8 @@ public class FieldOfView : MonoBehaviour
 		viewMesh.vertices = vertices;
 		viewMesh.triangles = triangles;
 		viewMesh.RecalculateNormals();
+
+		countdownManager.noticedByCamera = targetVisible;
 	}
 
 
@@ -134,7 +142,7 @@ public class FieldOfView : MonoBehaviour
 
         if (hit)
 		{
-			return new ViewCastInfo(true, hit.point, hit.distance, globalAngle);
+			return new ViewCastInfo(true, hit.point, hit.distance, globalAngle, hit.rigidbody);
 		}
 		else
 		{
@@ -157,13 +165,15 @@ public class FieldOfView : MonoBehaviour
 		public Vector2 point;
 		public float dst;
 		public float angle;
+		public Rigidbody2D rigidbody;
 
-		public ViewCastInfo(bool _hit, Vector2 _point, float _dst, float _angle)
+		public ViewCastInfo(bool _hit, Vector2 _point, float _dst, float _angle, Rigidbody2D _rigidbody = null)
 		{
 			hit = _hit;
 			point = _point;
 			dst = _dst;
 			angle = _angle;
+			rigidbody = _rigidbody;
 		}
 	}
 
