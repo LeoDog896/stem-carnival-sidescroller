@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8944154850967142316}
   - component: {fileID: 3919683984369351673}
   - component: {fileID: 7737366031634545358}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,8 +150,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcf64d7bdd0299248886c6f2c6b3d455, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  polygonCollider2D: {fileID: 0}
-  spriteRenderer: {fileID: 0}
+  polygonCollider2D: {fileID: 7737366031634545358}
+  spriteRenderer: {fileID: 136463514215550111}
 --- !u!60 &7737366031634545358
 PolygonCollider2D:
   m_ObjectHideFlags: 0

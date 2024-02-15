@@ -7,9 +7,17 @@ public class PolygonColliderGenerator : MonoBehaviour
     private List<Vector2> points = new List<Vector2>();
     [SerializeField] private PolygonCollider2D polygonCollider2D;
     [SerializeField] private SpriteRenderer spriteRenderer;
+    private Sprite oldSprite;
 
-    void Start()
+    void Update()
     {
+        if (oldSprite == spriteRenderer.sprite)
+        {
+            return;
+        }
+
+        oldSprite = spriteRenderer.sprite;
+
         polygonCollider2D.pathCount = spriteRenderer.sprite.GetPhysicsShapeCount();
         for (int i = 0; i < polygonCollider2D.pathCount; i++)
         {

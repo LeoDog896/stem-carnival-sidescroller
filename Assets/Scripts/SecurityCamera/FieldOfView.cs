@@ -13,7 +13,7 @@ public class FieldOfView : MonoBehaviour
 	public LayerMask obstacleMask;
 
 	[HideInInspector]
-	public List<Transform> visibleTargets = new List<Transform>();
+	public List<Transform> visibleTargets = new();
 
 	public float meshResolution;
 	public int edgeResolveIterations;
@@ -131,7 +131,6 @@ public class FieldOfView : MonoBehaviour
 	{
 		Vector3 dir = DirFromAngle(globalAngle, true);
 		RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, viewRadius, obstacleMask);
-		Debug.Log(hit);
 
         if (hit)
 		{
