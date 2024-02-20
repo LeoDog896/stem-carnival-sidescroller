@@ -23,6 +23,9 @@ public class FieldOfView : MonoBehaviour
 
 	public CountdownManager countdownManager;
 
+	[Range(0, 360)]
+	public float cameraRotation = 0f;
+
 	void Start()
 	{
         viewMesh = new Mesh
@@ -49,7 +52,7 @@ public class FieldOfView : MonoBehaviour
 
 		for (int i = 0; i <= stepCount; i++)
 		{
-			float angle = transform.eulerAngles.z - viewAngle / 2 + stepAngleSize * i;
+			float angle = (transform.eulerAngles.z + cameraRotation) - viewAngle / 2 + stepAngleSize * i;
 			ViewCastInfo newViewCast = ViewCast(angle);
 
 			if (i > 0)
@@ -154,7 +157,7 @@ public class FieldOfView : MonoBehaviour
 	{
 		if (!angleIsGlobal)
 		{
-			angleInDegrees += transform.eulerAngles.z;
+			angleInDegrees += (transform.eulerAngles.z) + (cameraRotation);
 		}
 		return new Vector2(Mathf.Sin(angleInDegrees * Mathf.Deg2Rad), Mathf.Cos(angleInDegrees * Mathf.Deg2Rad));
 	}

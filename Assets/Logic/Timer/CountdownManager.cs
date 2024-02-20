@@ -19,6 +19,7 @@ public class CountdownManager : MonoBehaviour
     void Update()
     {
         countdownTime -= Time.deltaTime * (noticedByCamera ? 5 : 1);
+        countdownTime = Mathf.Max(0, countdownTime);
 
         // M:SS:MSS
         countdownText.text = $"{Mathf.Floor(countdownTime / 60):00}:{Mathf.Floor(countdownTime % 60):00}:{Mathf.Floor((countdownTime * 100) % 100):00}";
