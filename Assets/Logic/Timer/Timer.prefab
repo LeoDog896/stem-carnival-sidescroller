@@ -137,7 +137,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!114 &7814230103239170408
 MonoBehaviour:
@@ -330,6 +330,7 @@ MonoBehaviour:
   countdownText: {fileID: 7814230104493272144}
   startCountdownTime: 60
   countdownTime: 60
+  noticedByCamera: 0
 --- !u!1 &7814230104817933161
 GameObject:
   m_ObjectHideFlags: 0
