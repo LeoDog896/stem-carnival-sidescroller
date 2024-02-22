@@ -10,7 +10,9 @@ public class MovingPlatformEditor : Editor
 		MovingPlatform movingPlatform = (MovingPlatform)target;
 		Handles.color = Color.white;
 
-		Handles.DrawLine(movingPlatform.transform.position, movingPlatform.transform.position + Vector3.left * movingPlatform.lowerBound);
-		Handles.DrawLine(movingPlatform.transform.position, movingPlatform.transform.position + Vector3.right * movingPlatform.upperBound);
+		var origin = movingPlatform.transform.position - new Vector3(0, 0.5f, 0);
+
+		Handles.DrawLine(origin, origin + Vector3.left * movingPlatform.lowerBound);
+		Handles.DrawLine(origin, origin + Vector3.right * movingPlatform.upperBound);
 	}
 }

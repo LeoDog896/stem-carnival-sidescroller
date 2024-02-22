@@ -11,15 +11,29 @@ public class MovingPlatform : MonoBehaviour
 
     private bool movingRight = true;
 
-    // Update is called once per frame
+    private Vector3 originalPosition;
+
+    void Start()
+    {
+        originalPosition = transform.position;
+    }
+
     void Update()
     {
-        var lowerBoundPosition = transform.position + Vector3.left * lowerBound;
-        var upperBoundPosition = transform.position + Vector3.right * upperBound;
+        if (movingRight && transform.position.x >= upperBound + originalPosition.x)
+        {
+            movingRight = false;
+        } else if (!movingRight && transform.position.x <= originalPosition.x - lowerBound)
+        {
+            movingRight = true;
+        }
 
         if (movingRight)
         {
-
+            transform.position += new Vector3(speed * Time.deltaTime, 0, 0);
+        } else
+        {
+            transform.position -= new Vector3(speed * Time.deltaTime, 0, 0);
         }
     }
 }
