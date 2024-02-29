@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private PhysicsMaterial2D groundMaterial;
     [SerializeField] private PhysicsMaterial2D airMaterial;
 
+    [SerializeField] private BoxCollider2D groundCollider;
+
     private void Start()
     {
         _originalParent = transform.parent;
@@ -68,7 +70,12 @@ public class PlayerController : MonoBehaviour
 
     private bool IsGrounded()
     {
-        var colliders = Physics2D.OverlapCircleAll(groundCheck.position, 0.3f, groundLayer);
+        var colliders = Physics2D.OverlapBoxAll(
+            groundCheck.position,
+            new Vector2(groundCollider.size.x, groundCollider.size.y),
+            0f,
+            groundLayer
+        );
 
         foreach (var collider in colliders)
         {
