@@ -824,7 +824,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1316792622778998694, guid: 2462df3aab654744a8d90009e7fdf3b9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -29.112576
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1316792622778998694, guid: 2462df3aab654744a8d90009e7fdf3b9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10062,6 +10062,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01ee0235efcd0d54f8148c2b9ad5f2d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  panel: {fileID: 0}
+  text: {fileID: 0}
+  countdownManager: {fileID: 0}
 --- !u!223 &2029755783
 Canvas:
   m_ObjectHideFlags: 0
