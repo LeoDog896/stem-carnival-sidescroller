@@ -967,7 +967,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9151159939137011022, guid: 6d9aa46a6772caf49a4207411cd18e9f, type: 3}
       propertyPath: viewAngle
-      value: 93
+      value: 86
       objectReference: {fileID: 0}
     - target: {fileID: 9151159939137011022, guid: 6d9aa46a6772caf49a4207411cd18e9f, type: 3}
       propertyPath: viewRadius
@@ -975,7 +975,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9151159939137011022, guid: 6d9aa46a6772caf49a4207411cd18e9f, type: 3}
       propertyPath: cameraRotation
-      value: 322
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9151159939137011022, guid: 6d9aa46a6772caf49a4207411cd18e9f, type: 3}
       propertyPath: viewMeshFilter
