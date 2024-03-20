@@ -25,9 +25,9 @@ jobs:
       - uses: actions/cache@v3
         with:
           path: ./Library
-          key: Library-stem-carnival-slots-WebGL
+          key: Library-stem-carnival-sidescroller-WebGL
           restore-keys: |
-            Library-stem-carnival-slots-
+            Library-stem-carnival-sidescroller-
             Library-
       - uses: game-ci/unity-builder@v4
         env:
