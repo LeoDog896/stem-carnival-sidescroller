@@ -9183,8 +9183,8 @@ Tilemap:
   - first: {x: 37, y: 5, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 13
-      m_TileSpriteIndex: 13
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -9518,7 +9518,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: d2a4cfe767807184785a3b079b83213e, type: 2}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 686
+  - m_RefCount: 687
     m_Data: {fileID: 11400000, guid: 775b12633e50f3a4282dd39b4f1a11d1, type: 2}
   - m_RefCount: 49
     m_Data: {fileID: 11400000, guid: 3304ba97b6331a440bd5c0a75ed5f59f, type: 2}
@@ -9538,7 +9538,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 28ff77ced00de5145818f4cccde6b3cc, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 2ba3c785f35539442bdc250a947f6603, type: 2}
-  - m_RefCount: 2
+  - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 4aef2e4fc85e0604f91abb2b3dab13b5, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 49
@@ -9547,7 +9547,7 @@ Tilemap:
     m_Data: {fileID: 1919352160, guid: b5e9459ae756e8c4691cc50df32b58e8, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 686
+  - m_RefCount: 687
     m_Data: {fileID: -1004508516, guid: b5e9459ae756e8c4691cc50df32b58e8, type: 3}
   - m_RefCount: 49
     m_Data: {fileID: 1371553281, guid: b5e9459ae756e8c4691cc50df32b58e8, type: 3}
@@ -9567,7 +9567,7 @@ Tilemap:
     m_Data: {fileID: -1979526796, guid: b5e9459ae756e8c4691cc50df32b58e8, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -115844743, guid: b5e9459ae756e8c4691cc50df32b58e8, type: 3}
-  - m_RefCount: 2
+  - m_RefCount: 1
     m_Data: {fileID: 1226175032, guid: b5e9459ae756e8c4691cc50df32b58e8, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 819
@@ -9658,6 +9658,18 @@ CompositeCollider2D:
       - X: 700000000
         Y: -70000000
       - X: 700000000
+        Y: 60000000
+      - X: 380000100
+        Y: 60000000
+      - X: 380000100
+        Y: 60000041
+      - X: 380000041
+        Y: 60000100
+      - X: 369999959
+        Y: 60000100
+      - X: 369999900
+        Y: 60000041
+      - X: 369999900
         Y: 60000000
       - X: -129999900
         Y: 60000000

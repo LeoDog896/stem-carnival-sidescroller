@@ -23,6 +23,10 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private BoxCollider2D groundCollider;
 
+    [SerializeField] private AudioSource jumpSound;
+    private bool wasJumping = false;
+    private int lastJumpFrame = 0;
+
     private void Start()
     {
         _originalParent = transform.parent;
@@ -35,11 +39,22 @@ public class PlayerController : MonoBehaviour
         if (jumpInput && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            // jumpSound.Play();
+            if (Time.frameCount - lastJumpFrame > 2)
+            {
+                jumpSound.Play();
+            }
+            wasJumping = true;
+            lastJumpFrame = Time.frameCount;
         }
 
         if (IsGrounded())
         {
             rb.sharedMaterial = groundMaterial;
+            if (wasJumping)
+            {
+                wasJumping = false;
+            }
         }
         else
         {
