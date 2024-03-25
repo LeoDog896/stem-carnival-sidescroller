@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CountdownManager : MonoBehaviour
 {
@@ -23,5 +24,10 @@ public class CountdownManager : MonoBehaviour
 
         // M:SS:MSS
         countdownText.text = $"{Mathf.Floor(countdownTime / 60):00}:{Mathf.Floor(countdownTime % 60):00}:{Mathf.Floor((countdownTime * 100) % 100):00}";
+
+        if (countdownTime <= 0)
+        {
+            SceneManager.LoadScene(4);
+        }
     }
 }
