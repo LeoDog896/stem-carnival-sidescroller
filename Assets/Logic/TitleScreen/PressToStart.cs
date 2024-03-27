@@ -22,10 +22,10 @@ public class PressToStart : MonoBehaviour
     {
         var height = Screen.height;
 
-        BioTrack.OnStart((List<JoinRequestUser> users) =>
+        if (Input.GetKeyDown("space"))
         {
             pressed = true;
-        });
+        }
 
         if (pressed)
         {
