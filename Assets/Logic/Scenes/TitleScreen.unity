@@ -433,7 +433,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6107223269347893638, guid: 0865f99a934e5ce4089605ed50b4bf21, type: 3}
       propertyPath: m_Name
-      value: LevelSelection (2)
+      value: LevelOne
       objectReference: {fileID: 0}
     - target: {fileID: 6107223269347893639, guid: 0865f99a934e5ce4089605ed50b4bf21, type: 3}
       propertyPath: m_Pivot.x
@@ -445,7 +445,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6107223269347893639, guid: 0865f99a934e5ce4089605ed50b4bf21, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6107223269347893639, guid: 0865f99a934e5ce4089605ed50b4bf21, type: 3}
       propertyPath: m_AnchorMax.x
@@ -533,13 +533,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1867344876}
     m_Modifications:
+    - target: {fileID: 4173970669008410963, guid: 0865f99a934e5ce4089605ed50b4bf21, type: 3}
+      propertyPath: thisSelected
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5765192522121483746, guid: 0865f99a934e5ce4089605ed50b4bf21, type: 3}
       propertyPath: sceneName
       value: Level1
       objectReference: {fileID: 0}
     - target: {fileID: 6107223269347893638, guid: 0865f99a934e5ce4089605ed50b4bf21, type: 3}
       propertyPath: m_Name
-      value: LevelSelection (1)
+      value: LevelThree
       objectReference: {fileID: 0}
     - target: {fileID: 6107223269347893639, guid: 0865f99a934e5ce4089605ed50b4bf21, type: 3}
       propertyPath: m_Pivot.x
@@ -551,7 +555,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6107223269347893639, guid: 0865f99a934e5ce4089605ed50b4bf21, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6107223269347893639, guid: 0865f99a934e5ce4089605ed50b4bf21, type: 3}
       propertyPath: m_AnchorMax.x
@@ -871,9 +875,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1103120107}
   - {fileID: 512525649}
   - {fileID: 1155937420}
-  - {fileID: 1103120107}
   m_Father: {fileID: 143901177}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1126,13 +1130,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1867344876}
     m_Modifications:
+    - target: {fileID: 4173970669008410963, guid: 0865f99a934e5ce4089605ed50b4bf21, type: 3}
+      propertyPath: thisSelected
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5765192522121483746, guid: 0865f99a934e5ce4089605ed50b4bf21, type: 3}
       propertyPath: sceneName
       value: Level2
       objectReference: {fileID: 0}
     - target: {fileID: 6107223269347893638, guid: 0865f99a934e5ce4089605ed50b4bf21, type: 3}
       propertyPath: m_Name
-      value: LevelSelection
+      value: LevelTwo
       objectReference: {fileID: 0}
     - target: {fileID: 6107223269347893639, guid: 0865f99a934e5ce4089605ed50b4bf21, type: 3}
       propertyPath: m_Pivot.x
@@ -1144,7 +1152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6107223269347893639, guid: 0865f99a934e5ce4089605ed50b4bf21, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6107223269347893639, guid: 0865f99a934e5ce4089605ed50b4bf21, type: 3}
       propertyPath: m_AnchorMax.x
